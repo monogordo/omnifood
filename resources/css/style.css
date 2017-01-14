@@ -203,7 +203,6 @@ header {
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
@@ -222,7 +221,7 @@ header {
 	margin: 5px 0;
 }
 
-/* Main navi */
+/* Main nav */
 .main-nav {
 	float: right;
 	list-style: none;
@@ -297,16 +296,15 @@ header {
 	width: 100%;
 	height: auto;
 	-webkit-transform: scale(1.15);
-	-ms-transform: scale(1.15);
 	transform: scale(1.15);
-	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 .meal-photo img:hover {
 	opacity: 1;
 	-webkit-transform: scale(1.03);
-	-ms-transform: scale(1.03);
 	transform: scale(1.03);
 }
 
@@ -390,6 +388,7 @@ header {
 /* ----------------------------------------------- */
 
 .section-testimonials {
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./img/back-customers.jpg');
 	background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./img/back-customers.jpg');
 	background-size: cover;
 	color: #fff;
@@ -455,7 +454,7 @@ cite img {
 
 .plan-box div:last-child {
 	text-align: center;
-	border: none;
+	border: 0;
 }
 
 .plan-price {
@@ -550,8 +549,9 @@ footer {
 .social-links li a:link,
 .social-links li a:visited {
 	text-decoration: none;
-	border: none;
+	border: 0;
 	color: #888;
+	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
@@ -569,6 +569,7 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
